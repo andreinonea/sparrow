@@ -296,9 +296,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.conversationList.setFrameShape(QtWidgets.QFrame.VLine)
         self.conversationList.setFrameShadow(QtWidgets.QFrame.Plain)
         self.conversationList.setLineWidth(1)
-        self.conversationHistory.setFrameShape(QtWidgets.QFrame.HLine)
-        self.conversationHistory.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.conversationHistory.setLineWidth(1)
+        self.conversationHistoryArea.setFrameShape(QtWidgets.QFrame.HLine)
+        self.conversationHistoryArea.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.conversationHistoryArea.setLineWidth(1)
         self.conversationTitleBar.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.conversationTitleBar.setFrameShadow(QtWidgets.QFrame.Plain)
         self.conversationTitleBar.setLineWidth(0)
@@ -509,6 +509,7 @@ class MessageBubble():
 
     # Generate required stylesheet
     def setupStyleSheet(self, direction):
+        statusTip = "Sent by you" if direction == self.window.SEND else "Sent by {name}"
         background_color = "rgb(71, 183, 99);" if direction == self.window.SEND else "rgb(240,240,240);"
         color = "#ffffff;" if direction == self.window.SEND else "#000000;"
         self.bubbleText.setStyleSheet("""
@@ -533,7 +534,7 @@ class MessageBubble():
                                 border-color: #DDDFFF;
                             }
                                    """)
-        self.bubbleText.setStatusTip("Sent by you")
+        self.bubbleText.setStatusTip(statusTip)
         self.bubbleText.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.IBeamCursor))
 
 

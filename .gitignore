@@ -1,2 +1,5 @@
 target/
+src/main/python/Sparrow/__pycache__
+src/main/python/Sparrow/IMServer.php
+
 
