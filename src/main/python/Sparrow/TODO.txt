@@ -1,0 +1,1 @@
+* fix little dots due to conv (list|history) frames (WINDOWS)

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=${app_name}
+GenericName=Sparrow messaging app
+Comment=Elegant messaging application
+Type=Application
+Exec=/opt/${app_name}/${app_name}
+Terminal=false
+NoDisplay=false
+Categories=${categories}
+Version=${version}
+Icon=${app_name}

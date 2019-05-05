@@ -1,0 +1,6 @@
+{
+    "app_name": "Sparrow",
+    "author": "Andrei Onea",
+    "main_module": "src/main/python/Sparrow/Sparrow.py",
+    "version": "2019.0.1"
+}
